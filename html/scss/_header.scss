@@ -1,0 +1,68 @@
+.main-header {}
+/* Primary Nav */
+@media (min-width: $desktop) {
+	.primary-nav {		
+		ul { margin: 0; padding: 0; list-style: none; float: right; 
+
+
+			li:hover > ul { visibility: visible;}
+		}
+		ul ul {
+			visibility: hidden; position: absolute; left: 0; top: 100%; width: 250px; z-index: 200;
+		}
+		li {
+			padding: 0; font-size: 16px; float: left; position: relative;
+			a { color: #4b4b4b; padding: 12px 13px; display: block; border-radius: 3px;}
+			a:hover { color: #fff; background-color: #27bd09;}
+			li { width: 100%; background: #fafafa;}
+		}
+		li.active {
+			a { color: #fff; background-color: #27bd09;
+				&:hover {background-color: lighten(#27bd09, 5%);}
+			}
+		}
+	}
+}
+
+#nav { display: none;
+	@media (min-width: $desktop) {
+		display: block;
+		visibility: visible;
+	}
+}
+.primary-nav .navbar-toggle{  background: #27bd09;
+	.icon-bar  {background-color:  #fff;}
+	@media (max-width: $tablet-max) {
+		display: block;
+	}
+}
+@media (max-width: $tablet-max) {
+	.wrap {position: relative; transition: all 0.3s ease 0s; right: 0;}	
+	.primary-nav { position: inherit; }
+	#nav{ position: absolute; height: 100%; width: 250px; background: #fafafa; z-index: 300; right: -250px; top: 0; }
+	.wrap.active { right: 250px;
+		#nav { display: block;  }
+	}
+	.primary-nav  {
+		ul { margin: 0; padding: 0; list-style: none;}
+		li { padding: 0; margin: 0;}
+		a { display: block; padding: 5px 10px;  color: #4b4b4b; border-top: 1px solid #ccc;
+			&:hover {color: #fff; background: #27bd09;}
+		}
+		li li a:before { content: '-- '}
+	}
+}
+.navigation-toggle2 { 
+	display: none;
+	@media (max-width: $mobile) { 
+		display: block;
+	}
+	line-height: 25px; padding: 10px 0;
+	background: #323736;
+	a {font-size: 15px; color: #fff;}
+	.iconic {font-size: 25px;
+		&:before { margin: 0; width:  auto;}
+	}
+}
+
+/* Primary Nav  end */
