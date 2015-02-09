@@ -24,4 +24,4 @@ javascripts_dir = "javascripts"
 preferred_syntax = :scss
 
 
-output_style = :compressed # by Compass.app 
+output_style = :compact # by Compass.app 
